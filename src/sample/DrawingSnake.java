@@ -20,7 +20,7 @@ public class DrawingSnake {
             for (int j = 0; j < Objects.requireNonNull(eatenApples).size(); j++) {
                 if (eatenApples.get(j).getX() == sX && eatenApples.get(j).getY() == sY) {
                     gc.setFill(Color.BLUE);
-                    if (i == snake.size() - 1 && eatenApples != null) {
+                    if (i == snake.size() - 1) {
                         justDigestedApple=true;
                     }
                 }
