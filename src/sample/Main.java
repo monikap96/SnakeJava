@@ -163,7 +163,6 @@ public class Main extends Application {
         snake.add(new Rectangle(3 * SIZE, 5 * SIZE, SIZE, SIZE));
         generateApple();
         drawAgain(gc);
-//        drawingElements.drawAgain(gc,label, snake, eatenApples, appleX, appleY,score);
     }
 
     private void generateApple() {
@@ -204,7 +203,6 @@ public class Main extends Application {
         if (!isGameOver) {
             DrawingGameField gameField = new DrawingGameField();
             gameField.drawGameField(gc, label, score);
-//            drawGameField(gc);
             gc.setLineWidth(1);
             drawApple(gc);
             DrawingSnake drawingSnake = new DrawingSnake();
