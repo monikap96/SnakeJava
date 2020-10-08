@@ -9,9 +9,11 @@ import java.util.Objects;
 
 import static sample.Consts.SIZE;
 
-public class DrawingSnake {
-    public boolean drawSnake(GraphicsContext gc, List<Rectangle> snake, List<Rectangle> eatenApples) {
-        boolean justDigestedApple=false;
+public class Snake {
+    private boolean justDigestedApple;
+
+    public void drawSnake(GraphicsContext gc, List<Rectangle> snake, List<Rectangle> eatenApples) {
+        justDigestedApple = false;
         gc.setFill(Color.GREEN);
         for (int i = 0; i < snake.size(); i++) {
             int sX = (int) snake.get(i).getX();
@@ -28,6 +30,9 @@ public class DrawingSnake {
             gc.fillRect(sX, sY, SIZE, SIZE);
             gc.strokeRect(sX, sY, SIZE, SIZE);
         }
+    }
+
+    public boolean isJustDigestedApple(){
         return justDigestedApple;
     }
 }
